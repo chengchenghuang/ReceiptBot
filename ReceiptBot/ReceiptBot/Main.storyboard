@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1MQ-JC-8B3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,14 +33,26 @@
                     <view key="view" contentMode="scaleToFill" id="Pyr-ed-npm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1fV-mb-P9c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1fV-mb-P9c" firstAttribute="trailing" secondItem="lYK-8k-odl" secondAttribute="trailing" id="9k0-yx-Yv1"/>
+                            <constraint firstItem="1fV-mb-P9c" firstAttribute="bottom" secondItem="lYK-8k-odl" secondAttribute="bottom" id="U6p-ss-ovF"/>
+                            <constraint firstItem="1fV-mb-P9c" firstAttribute="leading" secondItem="lYK-8k-odl" secondAttribute="leading" id="Z7r-yO-7Yy"/>
+                            <constraint firstItem="1fV-mb-P9c" firstAttribute="top" secondItem="lYK-8k-odl" secondAttribute="top" id="nmc-P9-J81"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lYK-8k-odl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Receipts" id="MrK-fx-TVh"/>
+                    <tabBarItem key="tabBarItem" title="Receipts" image="Receipt" id="MrK-fx-TVh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xH-Qh-JhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-630"/>
+            <point key="canvasLocation" x="4" y="-630.13493253373315"/>
         </scene>
         <!--Analysis-->
         <scene sceneID="nLc-Mm-tqw">
@@ -52,7 +64,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="aPA-DP-Byh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Analysis" id="B3b-Zz-QuZ"/>
+                    <tabBarItem key="tabBarItem" title="Analysis" image="Analysis" id="B3b-Zz-QuZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lq6-SK-xvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,14 +77,25 @@
                     <view key="view" contentMode="scaleToFill" id="GaD-OI-R6M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-nX-2Cb">
+                                <rect key="frame" x="129" y="177" width="116" height="72"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ssi-ed-GeC" firstAttribute="trailing" secondItem="WQG-nX-2Cb" secondAttribute="trailing" constant="130" id="SXO-qj-mah"/>
+                            <constraint firstItem="ssi-ed-GeC" firstAttribute="bottom" secondItem="WQG-nX-2Cb" secondAttribute="bottom" constant="369" id="XEN-OU-Crl"/>
+                            <constraint firstItem="WQG-nX-2Cb" firstAttribute="top" secondItem="ssi-ed-GeC" secondAttribute="top" constant="113" id="gIe-Ms-fSt"/>
+                            <constraint firstItem="WQG-nX-2Cb" firstAttribute="leading" secondItem="ssi-ed-GeC" secondAttribute="leading" constant="129" id="rG4-ub-oYZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ssi-ed-GeC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upload" id="uQl-Fm-T7Q"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="Camera" id="uQl-Fm-T7Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WZ-kf-8qG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-1295"/>
+            <point key="canvasLocation" x="4" y="-1295.8020989505249"/>
         </scene>
         <!--Log-->
         <scene sceneID="2pI-pn-sZ1">
@@ -81,14 +104,21 @@
                     <view key="view" contentMode="scaleToFill" id="YUW-CJ-HDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n1B-fC-yfw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="H94-Rd-1CL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Log" id="Ogh-pv-11m"/>
+                    <tabBarItem key="tabBarItem" title="Log" image="Log" id="Ogh-pv-11m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3is-cj-UJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="-1448"/>
+            <point key="canvasLocation" x="800.79999999999995" y="-1448.7256371814094"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DXe-to-1hF">
@@ -112,4 +142,10 @@
             <point key="canvasLocation" x="-948" y="-961"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Analysis" width="26" height="26"/>
+        <image name="Camera" width="30" height="24"/>
+        <image name="Log" width="26" height="26"/>
+        <image name="Receipt" width="30" height="22"/>
+    </resources>
 </document>
