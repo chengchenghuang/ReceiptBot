@@ -10,7 +10,11 @@
 		BD4B95B12075C82C004D4A85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B95B02075C82C004D4A85 /* AppDelegate.swift */; };
 		BD4B95BC2075C82C004D4A85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4B95BB2075C82C004D4A85 /* Assets.xcassets */; };
 		BD4B95C72075E348004D4A85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4B95C62075E348004D4A85 /* Main.storyboard */; };
-		BD4B95C92075E4EB004D4A85 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B95C82075E4EB004D4A85 /* File.swift */; };
+		BD4B95C92075E4EB004D4A85 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */; };
+		BD65DDEE207C1D2200326C01 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDED207C1D2200326C01 /* UploadViewController.swift */; };
+		BD65DDF0207C1D4500326C01 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDEF207C1D4500326C01 /* LogViewController.swift */; };
+		BD65DDF2207C1D5100326C01 /* ReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDF1207C1D5100326C01 /* ReceiptsViewController.swift */; };
+		BD65DDF5207C1D6600326C01 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDF4207C1D6600326C01 /* AnalysisViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +23,11 @@
 		BD4B95BB2075C82C004D4A85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD4B95C02075C82C004D4A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD4B95C62075E348004D4A85 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BD4B95C82075E4EB004D4A85 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		BD65DDED207C1D2200326C01 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		BD65DDEF207C1D4500326C01 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		BD65DDF1207C1D5100326C01 /* ReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewController.swift; sourceTree = "<group>"; };
+		BD65DDF4207C1D6600326C01 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +73,7 @@
 		BD4B95CA2075E50D004D4A85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD4B95C82075E4EB004D4A85 /* File.swift */,
+				BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -73,6 +81,10 @@
 		BD4B95CB2075E520004D4A85 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD65DDED207C1D2200326C01 /* UploadViewController.swift */,
+				BD65DDEF207C1D4500326C01 /* LogViewController.swift */,
+				BD65DDF1207C1D5100326C01 /* ReceiptsViewController.swift */,
+				BD65DDF4207C1D6600326C01 /* AnalysisViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -148,8 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4B95C92075E4EB004D4A85 /* File.swift in Sources */,
+				BD65DDF2207C1D5100326C01 /* ReceiptsViewController.swift in Sources */,
+				BD4B95C92075E4EB004D4A85 /* GlobalVariables.swift in Sources */,
+				BD65DDF5207C1D6600326C01 /* AnalysisViewController.swift in Sources */,
+				BD65DDEE207C1D2200326C01 /* UploadViewController.swift in Sources */,
 				BD4B95B12075C82C004D4A85 /* AppDelegate.swift in Sources */,
+				BD65DDF0207C1D4500326C01 /* LogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

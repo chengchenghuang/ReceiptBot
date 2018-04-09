@@ -29,7 +29,7 @@
         <!--Receipts-->
         <scene sceneID="7ld-qv-6aJ">
             <objects>
-                <viewController id="mek-xq-u0f" sceneMemberID="viewController">
+                <viewController id="mek-xq-u0f" customClass="ReceiptsViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pyr-ed-npm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1fV-mb-P9c">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3rI-5V-s7t">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3rI-5V-s7t" id="cf9-We-D8J">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,7 +67,7 @@
         <!--Analysis-->
         <scene sceneID="nLc-Mm-tqw">
             <objects>
-                <viewController id="Yo4-0j-5LV" sceneMemberID="viewController">
+                <viewController id="Yo4-0j-5LV" customClass="AnalysisViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXG-am-oOi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,10 +80,25 @@
             </objects>
             <point key="canvasLocation" x="801" y="-478"/>
         </scene>
+        <!--Uploading-->
+        <scene sceneID="egU-35-SEv">
+            <objects>
+                <viewController title="Uploading" id="4tz-nD-E1K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="71h-Aw-0h0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="8KA-Er-vmb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crc-xD-E64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="-1296"/>
+        </scene>
         <!--Upload-->
         <scene sceneID="UrW-W3-ntq">
             <objects>
-                <viewController id="YYL-X9-MY2" sceneMemberID="viewController">
+                <viewController id="YYL-X9-MY2" customClass="UploadViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GaD-OI-R6M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,9 +106,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-nX-2Cb">
                                 <rect key="frame" x="129" y="177" width="116" height="72"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-3F-g4V">
+                                <rect key="frame" x="160" y="264" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" red="0.18655741214752197" green="0.23903200030326843" blue="0.2600409984588623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1Pq-3F-g4V" firstAttribute="top" secondItem="WQG-nX-2Cb" secondAttribute="bottom" constant="15" id="AMs-vi-V7g"/>
                             <constraint firstItem="ssi-ed-GeC" firstAttribute="trailing" secondItem="WQG-nX-2Cb" secondAttribute="trailing" constant="130" id="SXO-qj-mah"/>
                             <constraint firstItem="ssi-ed-GeC" firstAttribute="bottom" secondItem="WQG-nX-2Cb" secondAttribute="bottom" constant="369" id="XEN-OU-Crl"/>
                             <constraint firstItem="WQG-nX-2Cb" firstAttribute="top" secondItem="ssi-ed-GeC" secondAttribute="top" constant="113" id="gIe-Ms-fSt"/>
@@ -92,6 +124,9 @@
                         <viewLayoutGuide key="safeArea" id="ssi-ed-GeC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="Camera" id="uQl-Fm-T7Q"/>
+                    <connections>
+                        <segue destination="4tz-nD-E1K" kind="show" identifier="uploadToUploadding" id="GXI-2X-bb5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WZ-kf-8qG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +135,7 @@
         <!--Log-->
         <scene sceneID="2pI-pn-sZ1">
             <objects>
-                <viewController id="gJT-Mm-OCe" sceneMemberID="viewController">
+                <viewController id="gJT-Mm-OCe" customClass="LogViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YUW-CJ-HDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +144,39 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dmq-Kv-Uzg">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dmq-Kv-Uzg" id="XPi-M4-uKe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAc-sL-kEw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-vt-xfA">
+                                                    <rect key="frame" x="0.0" y="22" width="280" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.37467890658732728" green="0.37862289507772018" blue="0.37862289507772018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dollar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4N-4z-G8r">
+                                                    <rect key="frame" x="288" y="0.0" width="87" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.39084215444192577" green="0.39495628238341973" blue="0.39495628238341973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
