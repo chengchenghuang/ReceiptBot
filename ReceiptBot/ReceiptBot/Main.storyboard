@@ -26,60 +26,6 @@
             </objects>
             <point key="canvasLocation" x="-1823" y="-961"/>
         </scene>
-        <!--Receipts-->
-        <scene sceneID="7ld-qv-6aJ">
-            <objects>
-                <viewController id="mek-xq-u0f" customClass="ReceiptsViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pyr-ed-npm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1fV-mb-P9c">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3rI-5V-s7t">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3rI-5V-s7t" id="cf9-We-D8J">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1fV-mb-P9c" firstAttribute="trailing" secondItem="lYK-8k-odl" secondAttribute="trailing" id="9k0-yx-Yv1"/>
-                            <constraint firstItem="1fV-mb-P9c" firstAttribute="bottom" secondItem="lYK-8k-odl" secondAttribute="bottom" id="U6p-ss-ovF"/>
-                            <constraint firstItem="1fV-mb-P9c" firstAttribute="leading" secondItem="lYK-8k-odl" secondAttribute="leading" id="Z7r-yO-7Yy"/>
-                            <constraint firstItem="1fV-mb-P9c" firstAttribute="top" secondItem="lYK-8k-odl" secondAttribute="top" id="nmc-P9-J81"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lYK-8k-odl"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Receipts" image="Receipt" id="MrK-fx-TVh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9xH-Qh-JhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4" y="-630.13493253373315"/>
-        </scene>
-        <!--Analysis-->
-        <scene sceneID="nLc-Mm-tqw">
-            <objects>
-                <viewController id="Yo4-0j-5LV" customClass="AnalysisViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fXG-am-oOi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="aPA-DP-Byh"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Analysis" image="Analysis" id="B3b-Zz-QuZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lq6-SK-xvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="801" y="-478"/>
-        </scene>
         <!--Uploading-->
         <scene sceneID="egU-35-SEv">
             <objects>
@@ -93,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crc-xD-E64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="-1296"/>
+            <point key="canvasLocation" x="897" y="-1296"/>
         </scene>
         <!--Upload-->
         <scene sceneID="UrW-W3-ntq">
@@ -186,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3is-cj-UJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="-1448.7256371814094"/>
+            <point key="canvasLocation" x="4" y="-584"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DXe-to-1hF">
@@ -200,9 +146,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="YYL-X9-MY2" kind="relationship" relationship="viewControllers" id="WHD-nH-KFY"/>
-                        <segue destination="mek-xq-u0f" kind="relationship" relationship="viewControllers" id="SJS-L1-S6U"/>
                         <segue destination="gJT-Mm-OCe" kind="relationship" relationship="viewControllers" id="aqk-0o-Mvf"/>
-                        <segue destination="Yo4-0j-5LV" kind="relationship" relationship="viewControllers" id="Qbp-EO-f9g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mi7-2w-ZOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,9 +155,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Analysis" width="26" height="26"/>
         <image name="Camera" width="30" height="24"/>
         <image name="Log" width="26" height="26"/>
-        <image name="Receipt" width="30" height="22"/>
     </resources>
 </document>

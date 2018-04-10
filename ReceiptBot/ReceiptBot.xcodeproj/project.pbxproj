@@ -13,8 +13,6 @@
 		BD4B95C92075E4EB004D4A85 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */; };
 		BD65DDEE207C1D2200326C01 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDED207C1D2200326C01 /* UploadViewController.swift */; };
 		BD65DDF0207C1D4500326C01 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDEF207C1D4500326C01 /* LogViewController.swift */; };
-		BD65DDF2207C1D5100326C01 /* ReceiptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDF1207C1D5100326C01 /* ReceiptsViewController.swift */; };
-		BD65DDF5207C1D6600326C01 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDF4207C1D6600326C01 /* AnalysisViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +24,6 @@
 		BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		BD65DDED207C1D2200326C01 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		BD65DDEF207C1D4500326C01 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
-		BD65DDF1207C1D5100326C01 /* ReceiptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewController.swift; sourceTree = "<group>"; };
-		BD65DDF4207C1D6600326C01 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +79,6 @@
 			children = (
 				BD65DDED207C1D2200326C01 /* UploadViewController.swift */,
 				BD65DDEF207C1D4500326C01 /* LogViewController.swift */,
-				BD65DDF1207C1D5100326C01 /* ReceiptsViewController.swift */,
-				BD65DDF4207C1D6600326C01 /* AnalysisViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -160,9 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD65DDF2207C1D5100326C01 /* ReceiptsViewController.swift in Sources */,
 				BD4B95C92075E4EB004D4A85 /* GlobalVariables.swift in Sources */,
-				BD65DDF5207C1D6600326C01 /* AnalysisViewController.swift in Sources */,
 				BD65DDEE207C1D2200326C01 /* UploadViewController.swift in Sources */,
 				BD4B95B12075C82C004D4A85 /* AppDelegate.swift in Sources */,
 				BD65DDF0207C1D4500326C01 /* LogViewController.swift in Sources */,
