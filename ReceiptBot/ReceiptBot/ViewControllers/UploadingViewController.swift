@@ -1,5 +1,5 @@
 //
-//  LogViewController.swift
+//  UploadingViewController.swift
 //  ReceiptBot
 //
 //  Created by Jen on 4/9/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogViewController: UIViewController {
+class UploadingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

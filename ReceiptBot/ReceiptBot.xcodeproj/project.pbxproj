@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD309D21207C76BA008CE686 /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD309D20207C76BA008CE686 /* LogTableViewController.swift */; };
+		BD309D24207C77E8008CE686 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD309D22207C77E8008CE686 /* CoreData.xcdatamodeld */; };
+		BD309D26207C7939008CE686 /* UploadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD309D25207C7939008CE686 /* UploadingViewController.swift */; };
+		BD309D28207C7D3C008CE686 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD309D27207C7D3B008CE686 /* LogTableViewCell.swift */; };
 		BD4B95B12075C82C004D4A85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B95B02075C82C004D4A85 /* AppDelegate.swift */; };
 		BD4B95BC2075C82C004D4A85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4B95BB2075C82C004D4A85 /* Assets.xcassets */; };
 		BD4B95C72075E348004D4A85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4B95C62075E348004D4A85 /* Main.storyboard */; };
-		BD4B95C92075E4EB004D4A85 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */; };
 		BD65DDEE207C1D2200326C01 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDED207C1D2200326C01 /* UploadViewController.swift */; };
-		BD65DDF0207C1D4500326C01 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65DDEF207C1D4500326C01 /* LogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD309D20207C76BA008CE686 /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
+		BD309D23207C77E8008CE686 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BD309D25207C7939008CE686 /* UploadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadingViewController.swift; sourceTree = "<group>"; };
+		BD309D27207C7D3B008CE686 /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
 		BD4B95AD2075C82C004D4A85 /* ReceiptBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4B95B02075C82C004D4A85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD4B95BB2075C82C004D4A85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD4B95C02075C82C004D4A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD4B95C62075E348004D4A85 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		BD65DDED207C1D2200326C01 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		BD65DDEF207C1D4500326C01 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				BD4B95B02075C82C004D4A85 /* AppDelegate.swift */,
 				BD4B95BB2075C82C004D4A85 /* Assets.xcassets */,
 				BD4B95C02075C82C004D4A85 /* Info.plist */,
+				BD309D22207C77E8008CE686 /* CoreData.xcdatamodeld */,
 			);
 			path = ReceiptBot;
 			sourceTree = "<group>";
@@ -69,7 +74,6 @@
 		BD4B95CA2075E50D004D4A85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD4B95C82075E4EB004D4A85 /* GlobalVariables.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -78,7 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				BD65DDED207C1D2200326C01 /* UploadViewController.swift */,
-				BD65DDEF207C1D4500326C01 /* LogViewController.swift */,
+				BD309D20207C76BA008CE686 /* LogTableViewController.swift */,
+				BD309D25207C7939008CE686 /* UploadingViewController.swift */,
+				BD309D27207C7D3B008CE686 /* LogTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,10 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4B95C92075E4EB004D4A85 /* GlobalVariables.swift in Sources */,
+				BD309D28207C7D3C008CE686 /* LogTableViewCell.swift in Sources */,
+				BD309D21207C76BA008CE686 /* LogTableViewController.swift in Sources */,
+				BD309D26207C7939008CE686 /* UploadingViewController.swift in Sources */,
 				BD65DDEE207C1D2200326C01 /* UploadViewController.swift in Sources */,
 				BD4B95B12075C82C004D4A85 /* AppDelegate.swift in Sources */,
-				BD65DDF0207C1D4500326C01 /* LogViewController.swift in Sources */,
+				BD309D24207C77E8008CE686 /* CoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +329,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD309D22207C77E8008CE686 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD309D23207C77E8008CE686 /* Model.xcdatamodel */,
+			);
+			currentVersion = BD309D23207C77E8008CE686 /* Model.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BD4B95A52075C82C004D4A85 /* Project object */;
 }
