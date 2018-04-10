@@ -49,14 +49,13 @@ class LogTableViewController: UIViewController, UITableViewDelegate, UITableView
             let log = savedReceipts[indexPath.row]
             context.delete(log)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            // now that we've deleted a dog, need to update the savedDogs array again
-            fetchDogsFromCoreData()
+            fetchLogsFromCoreData()
         }
         tableView.reloadData()
     }
     
     /// Uses the App Delegate's Context to get the dogs saved to Core Data
-    func fetchDogsFromCoreData() {
+    func fetchLogsFromCoreData() {
         do {
             savedReceipts = try context.fetch(Receipt.fetchRequest())
         } catch {

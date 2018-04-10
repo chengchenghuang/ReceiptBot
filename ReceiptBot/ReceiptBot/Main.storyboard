@@ -49,8 +49,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-nX-2Cb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-nX-2Cb">
                                 <rect key="frame" x="129" y="177" width="116" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take a Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-3F-g4V">
                                 <rect key="frame" x="139" y="263" width="97" height="21"/>
@@ -59,25 +60,19 @@
                                 <color key="textColor" red="0.18655741214752197" green="0.23903200030326843" blue="0.2600409984588623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Receipt" translatesAutoresizingMaskIntoConstraints="NO" id="w8B-56-Fk5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Receipt" translatesAutoresizingMaskIntoConstraints="NO" id="w8B-56-Fk5">
                                 <rect key="frame" x="129" y="322" width="116" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhv-UP-zkL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhv-UP-zkL">
                                 <rect key="frame" x="160" y="407" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" red="0.18655741209999999" green="0.23903200029999999" blue="0.26004099850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ssi-ed-GeC" firstAttribute="trailing" secondItem="WQG-nX-2Cb" secondAttribute="trailing" constant="130" id="SXO-qj-mah"/>
-                            <constraint firstItem="ssi-ed-GeC" firstAttribute="bottom" secondItem="WQG-nX-2Cb" secondAttribute="bottom" constant="369" id="XEN-OU-Crl"/>
-                            <constraint firstItem="zhv-UP-zkL" firstAttribute="top" secondItem="w8B-56-Fk5" secondAttribute="bottom" constant="13" id="a8Y-Pw-ATh"/>
-                            <constraint firstItem="ssi-ed-GeC" firstAttribute="bottom" secondItem="zhv-UP-zkL" secondAttribute="bottom" constant="190" id="ekg-m7-ueT"/>
-                            <constraint firstItem="WQG-nX-2Cb" firstAttribute="top" secondItem="ssi-ed-GeC" secondAttribute="top" constant="113" id="gIe-Ms-fSt"/>
-                            <constraint firstItem="WQG-nX-2Cb" firstAttribute="leading" secondItem="ssi-ed-GeC" secondAttribute="leading" constant="129" id="rG4-ub-oYZ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ssi-ed-GeC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="Camera" id="uQl-Fm-T7Q"/>
@@ -143,14 +138,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Log" image="Log" id="Ogh-pv-11m"/>
                     <connections>
-                        <outlet property="LogTable" destination="n1B-fC-yfw" id="Xdr-ev-8Lj"/>
-                        <outlet property="LogTableView" destination="n1B-fC-yfw" id="LKe-6E-IfG"/>
-                        <outlet property="logTableView" destination="n1B-fC-yfw" id="K9c-TS-1rN"/>
+                        <outlet property="logTableView" destination="n1B-fC-yfw" id="TMR-10-M6A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3is-cj-UJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-584"/>
+            <point key="canvasLocation" x="4" y="-584.25787106446785"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DXe-to-1hF">
