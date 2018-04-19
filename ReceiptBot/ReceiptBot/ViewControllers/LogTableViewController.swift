@@ -22,9 +22,9 @@ class LogTableViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = logTableView.dequeueReusableCell(withIdentifier: "receiptCell") as? LogTableViewCell {
             let receipt = savedReceipts[indexPath.row]
-            cell.amount.text = "\(String(describing: receipt.amount))"
-            cell.memo.text = "\(String(describing: receipt.memo))"
-            cell.date.text = "\(String(describing: receipt.date))"
+            cell.amount.text = receipt.amount
+            cell.memo.text = receipt.memo
+            cell.date.text = receipt.date
             return cell
         }
         return UITableViewCell()

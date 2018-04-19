@@ -91,7 +91,6 @@
                     </view>
                     <connections>
                         <outlet property="amount" destination="Phc-Sn-5ut" id="eHO-hj-I6T"/>
-                        <outlet property="date" destination="F3x-SQ-39r" id="jkU-bC-dUy"/>
                         <outlet property="memo" destination="yNi-by-dYI" id="RJc-0F-ohK"/>
                         <outlet property="userDate" destination="F3x-SQ-39r" id="bDc-4s-ef0"/>
                         <segue destination="gJT-Mm-OCe" kind="show" identifier="uploadingToLog" id="wVX-UL-CmT"/>

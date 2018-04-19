@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  ReceiptBot
-//
-//  Created by Jen on 4/4/18.
-//  Copyright © 2018 iOS Decal - Jenny | CiCi | Victor. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
@@ -40,13 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
     
-    
     // MARK: - Core Data stack
     
-    // Note - this is automatically generated for you when you check "Use Core Data". I did not add any code to this method.
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -76,7 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Core Data Saving support
     
-    // Note - this is automatically generated for you when you check "Use Core Data". I did not add any code to this method.
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -90,6 +80,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
 }
-
