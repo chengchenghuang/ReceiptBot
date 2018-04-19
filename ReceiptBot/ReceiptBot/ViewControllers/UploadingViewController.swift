@@ -17,7 +17,7 @@ class UploadingViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "uploadingToLog", sender: sender)
-        saveReceipt()
+        // saveReceipt()
     }
     
     func saveReceipt() {
