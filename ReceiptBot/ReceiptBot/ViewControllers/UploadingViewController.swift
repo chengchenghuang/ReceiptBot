@@ -10,6 +10,28 @@ import UIKit
 
 class UploadingViewController: UIViewController {
 
+    @IBOutlet weak var memo: UITextView!
+    @IBOutlet weak var amount: UITextField!
+    @IBOutlet weak var userDate: UITextField!
+    
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "uploadingToLog", sender: sender)
+        saveReceipt()
+    }
+    
+    func saveReceipt() {
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        let context = appDel.persistentContainer.viewContext
+        if let m = self.memo.text {
+            let receipt = Receipt(context: context)
+            receipt.amount = self.amount.text
+            receipt.date = self.userDate.text
+            receipt.memo = self.memo.text
+            appDel.saveContext()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

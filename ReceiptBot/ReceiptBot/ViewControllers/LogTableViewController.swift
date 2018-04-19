@@ -22,19 +22,28 @@ class LogTableViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = logTableView.dequeueReusableCell(withIdentifier: "receiptCell") as? LogTableViewCell {
             let receipt = savedReceipts[indexPath.row]
-            cell.category.text = receipt.category
             cell.amount.text = "\(String(describing: receipt.amount))"
+            cell.memo.text = "\(String(describing: receipt.memo))"
             cell.date.text = "\(String(describing: receipt.date))"
             return cell
         }
         return UITableViewCell()
     }
     
+    func fetchReceiptsFromCoreData() {
+        do {
+            savedReceipts = try context.fetch(Receipt.fetchRequest())
+        }
+        catch {
+            print("Fetch failed :( ")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         logTableView.delegate = self
         logTableView.dataSource = self
+        fetchReceiptsFromCoreData()
         // Do any additional setup after loading the view.
     }
 

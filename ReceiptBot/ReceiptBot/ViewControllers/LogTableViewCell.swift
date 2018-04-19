@@ -10,7 +10,7 @@ import UIKit
 
 class LogTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var memo: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var amount: UILabel!
     

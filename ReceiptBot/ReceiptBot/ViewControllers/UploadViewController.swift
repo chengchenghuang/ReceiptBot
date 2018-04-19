@@ -10,12 +10,16 @@ import UIKit
 
 class UploadViewController: UIViewController {
 
+    @IBAction func uploadReceipt(_ sender: Any) {
+        performSegue(withIdentifier: "uploading", sender: sender)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
