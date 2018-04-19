@@ -19,6 +19,10 @@ class LogTableViewController: UIViewController, UITableViewDelegate, UITableView
         return savedReceipts.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = logTableView.dequeueReusableCell(withIdentifier: "receiptCell") as? LogTableViewCell {
             let receipt = savedReceipts[indexPath.row]
