@@ -26,7 +26,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoUpload" {
             if let controller_instance = segue.destination as? UploadingViewController{
-                controller_instance.receipt = currentimage
+                controller_instance.receiptimage = currentimage
             }
         }
     }

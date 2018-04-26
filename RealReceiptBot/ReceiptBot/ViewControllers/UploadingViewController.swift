@@ -10,12 +10,14 @@ import UIKit
 
 class UploadingViewController: UIViewController {
 
-    @IBOutlet weak var memo: UITextView!
+
     @IBOutlet weak var amount: UITextField!
     @IBOutlet weak var userDate: UITextField!
     @IBOutlet var photo: UIImageView!
     
-    var receipt = UIImage(named: "emptyreceipt")
+    @IBOutlet var memo: UITextField!
+    
+    var receiptimage = UIImage(named: "emptyreceipt")
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         saveReceipt()
@@ -46,18 +48,21 @@ class UploadingViewController: UIViewController {
     func saveReceipt() {
         let appDel = UIApplication.shared.delegate as! AppDelegate
         let context = appDel.persistentContainer.viewContext
+        
         if (self.memo.text) != nil {
             let receipt = Receipt(context: context)
             receipt.amount = self.amount.text
             receipt.date = self.userDate.text
             receipt.memo = self.memo.text
+            let dataImage = UIImageJPEGRepresentation(self.receiptimage!, 0.0);
+            receipt.photo = dataImage
             appDel.saveContext()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photo.image = receipt
+        photo.image = receiptimage
 
         // Do any additional setup after loading the view.
     }

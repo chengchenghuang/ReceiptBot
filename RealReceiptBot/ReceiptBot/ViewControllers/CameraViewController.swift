@@ -113,9 +113,6 @@ class ViewController: UIViewController {
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
         
     }
-    
-
-    
 }
 
 

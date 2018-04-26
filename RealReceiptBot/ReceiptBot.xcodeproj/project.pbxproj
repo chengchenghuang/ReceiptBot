@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0FACF45E208E97C000E034C2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FACF45D208E97C000E034C2 /* CameraViewController.swift */; };
 		0FACF460208E987400E034C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FACF45F208E987300E034C2 /* MainViewController.swift */; };
+		0FF04BF520916C8B00BAAF16 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF04BF420916C8B00BAAF16 /* PreviewController.swift */; };
 		BD309D21207C76BA008CE686 /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD309D20207C76BA008CE686 /* LogTableViewController.swift */; };
 		BD309D24207C77E8008CE686 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD309D22207C77E8008CE686 /* CoreData.xcdatamodeld */; };
 		BD309D26207C7939008CE686 /* UploadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD309D25207C7939008CE686 /* UploadingViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0FACF45D208E97C000E034C2 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		0FACF45F208E987300E034C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0FF04BF420916C8B00BAAF16 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		BD309D20207C76BA008CE686 /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
 		BD309D23207C77E8008CE686 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BD309D25207C7939008CE686 /* UploadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadingViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				BD309D25207C7939008CE686 /* UploadingViewController.swift */,
 				0FACF45F208E987300E034C2 /* MainViewController.swift */,
 				BD309D27207C7D3B008CE686 /* LogTableViewCell.swift */,
+				0FF04BF420916C8B00BAAF16 /* PreviewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF04BF520916C8B00BAAF16 /* PreviewController.swift in Sources */,
 				BD309D28207C7D3C008CE686 /* LogTableViewCell.swift in Sources */,
 				BD309D21207C76BA008CE686 /* LogTableViewController.swift in Sources */,
 				BD309D26207C7939008CE686 /* UploadingViewController.swift in Sources */,

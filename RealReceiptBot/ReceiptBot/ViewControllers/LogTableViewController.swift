@@ -14,6 +14,7 @@ class LogTableViewController: UIViewController, UITableViewDelegate, UITableView
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var savedReceipts: [Receipt] = []
+    var currentimage = UIImage(named: "emptyreceipt")
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedReceipts.count
@@ -21,6 +22,20 @@ class LogTableViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let receipt = savedReceipts[indexPath.row]
+        currentimage = UIImage(data: receipt.photo!)!
+        performSegue(withIdentifier: "gettoPreview", sender: tableView)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gettoPreview" {
+            if let controller_instance = segue.destination as? PreviewController{
+                controller_instance.receiptimage = currentimage
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,7 +98,8 @@ class LogTableViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
+    
     */
 
 }
+
