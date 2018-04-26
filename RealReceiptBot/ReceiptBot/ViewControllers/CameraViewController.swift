@@ -111,7 +111,15 @@ class ViewController: UIViewController {
         
         // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
-        
+        //performSegue(withIdentifier: "cameratoupload", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cameratoupload" {
+            if let controller_instance = segue.destination as? UploadingViewController{
+                controller_instance.receiptimage = savedimage
+            }
+        }
     }
 }
 
@@ -141,6 +149,7 @@ extension ViewController : AVCapturePhotoCaptureDelegate {
             // Save our captured image to photos album
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             savedimage = image
+            performSegue(withIdentifier: "cameratoupload", sender: nil)
         }
         
     }

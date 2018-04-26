@@ -37,11 +37,6 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func unwindToMainViewConraewfwdsoller(segue: UIStoryboardSegue) {
-//
-//    }
-
-
 
     /// Opens the user's library, allowing them to choose a photo
     ///
