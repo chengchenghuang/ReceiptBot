@@ -11,12 +11,15 @@ import UIKit
 class UploadViewController: UIViewController {
 
     @IBAction func uploadReceipt(_ sender: Any) {
-        performSegue(withIdentifier: "uploading", sender: sender)
+        performSegue(withIdentifier: "gotolibrary", sender: sender)
     }
 
     @IBAction func gotoCamera(_ sender: UIButton) {
         performSegue(withIdentifier: "GoToCamera", sender: sender)
+        
     }
+    
+    
     
 
     override func viewDidLoad() {

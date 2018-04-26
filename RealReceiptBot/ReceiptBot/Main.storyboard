@@ -42,13 +42,16 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditingWithSender:" destination="4tz-nD-E1K" eventType="editingDidEnd" id="j0K-mq-QtS"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Phc-Sn-5ut">
                                 <rect key="frame" x="139" y="241" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZP-BD-tpx">
                                 <rect key="frame" x="169" y="145" width="36" height="21"/>
@@ -64,11 +67,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNi-by-dYI">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNi-by-dYI">
                                 <rect key="frame" x="67" y="108" width="240" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYN-ui-cW1">
                                 <rect key="frame" x="163" y="79" width="48" height="21"/>
@@ -77,8 +80,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvJ-32-yw1">
-                                <rect key="frame" x="73" y="308" width="240" height="320"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyreceipt" translatesAutoresizingMaskIntoConstraints="NO" id="VvJ-32-yw1">
+                                <rect key="frame" x="73" y="326" width="244" height="302"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-ck-ur4">
@@ -104,13 +107,14 @@
                     <connections>
                         <outlet property="amount" destination="Phc-Sn-5ut" id="eHO-hj-I6T"/>
                         <outlet property="memo" destination="yNi-by-dYI" id="RJc-0F-ohK"/>
+                        <outlet property="photo" destination="VvJ-32-yw1" id="z1H-bM-c5y"/>
                         <outlet property="userDate" destination="F3x-SQ-39r" id="bDc-4s-ef0"/>
                         <segue destination="gJT-Mm-OCe" kind="show" identifier="uploadingToLog" id="wVX-UL-CmT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crc-xD-E64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232.8" y="-1296.7016491754123"/>
+            <point key="canvasLocation" x="1392.8" y="-961.16941529235385"/>
         </scene>
         <!--Upload-->
         <scene sceneID="UrW-W3-ntq">
@@ -121,20 +125,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ul-Vm-hAe">
-                                <rect key="frame" x="122" y="404" width="144" height="30"/>
+                                <rect key="frame" x="115" y="496" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose From Library"/>
                                 <connections>
                                     <action selector="uploadReceipt:" destination="YYL-X9-MY2" eventType="touchUpInside" id="OKa-WV-9XQ"/>
-                                    <segue destination="mAB-7j-99Q" kind="show" id="L1c-JO-peV"/>
+                                    <segue destination="mAB-7j-99Q" kind="show" identifier="gotolibrary" id="L1c-JO-peV"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Camera2" translatesAutoresizingMaskIntoConstraints="NO" id="o63-O9-Wob">
-                                <rect key="frame" x="144" y="155" width="100" height="100"/>
+                                <rect key="frame" x="137" y="273" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-dP-HZs">
-                                <rect key="frame" x="139" y="249" width="111" height="30"/>
+                                <rect key="frame" x="132" y="365" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Capture Receipt"/>
                                 <connections>
@@ -143,21 +147,36 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Receipt" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-nX-2Cb">
-                                <rect key="frame" x="129" y="323" width="130" height="85"/>
+                                <rect key="frame" x="122" y="403" width="130" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We help you keep track of your receipts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tz8-w3-rlZ">
+                                <rect key="frame" x="46" y="244" width="303" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Robot" translatesAutoresizingMaskIntoConstraints="NO" id="ZCA-l7-sDA">
+                                <rect key="frame" x="132" y="131" width="111" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to ReceiptBot!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXR-WV-IVO">
+                                <rect key="frame" x="95" y="102" width="184" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ssi-ed-GeC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upload" image="Upload" id="uQl-Fm-T7Q"/>
-                    <connections>
-                        <segue destination="4tz-nD-E1K" kind="show" identifier="uploading" id="gZV-xT-0Be"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Upload" image="TryUpload" landscapeImage="TryUpload" selectedImage="TryUpload" id="uQl-Fm-T7Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WZ-kf-8qG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-1295.8020989505249"/>
+            <point key="canvasLocation" x="-84" y="-961.16941529235385"/>
         </scene>
         <!--Log-->
         <scene sceneID="2pI-pn-sZ1">
@@ -197,6 +216,13 @@
                                                     <color key="textColor" red="0.37467890658732728" green="0.37862289507772018" blue="0.37862289507772018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45D-EA-JKu">
+                                                    <rect key="frame" x="250" y="39" width="11" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YAc-sL-kEw" firstAttribute="leading" secondItem="XPi-M4-uKe" secondAttribute="leadingMargin" constant="11" id="1nK-Yp-gbl"/>
@@ -213,6 +239,7 @@
                                             <outlet property="amount" destination="T4N-4z-G8r" id="6AB-QD-NkF"/>
                                             <outlet property="date" destination="4xs-vt-xfA" id="FEa-dc-YUR"/>
                                             <outlet property="memo" destination="YAc-sL-kEw" id="YCc-Ry-axO"/>
+                                            <segue destination="2fI-1t-01o" kind="show" identifier="gettoPreview" id="uPK-rf-VMq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -228,7 +255,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3is-cj-UJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="-171"/>
+            <point key="canvasLocation" x="1652" y="-46"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lJm-NC-LIF">
+            <objects>
+                <viewController id="2fI-1t-01o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Aq-tW-zRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T6T-f1-DNz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b3J-Vn-VAN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HdR-l6-e2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2682" y="-46"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DXe-to-1hF">
@@ -252,7 +300,7 @@
         <!--View Controller-->
         <scene sceneID="lHa-si-y0i">
             <objects>
-                <viewController id="x3f-6v-t4N" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="x3f-6v-t4N" customClass="ViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="saQ-yv-amC"/>
                         <viewControllerLayoutGuide type="bottom" id="Pco-vs-hUQ"/>
@@ -303,16 +351,17 @@
                         <outlet property="captureButton" destination="cD7-nI-45Q" id="jPJ-xn-OJc"/>
                         <outlet property="messageLabel" destination="8Ae-Bi-gGn" id="QJm-vP-edY"/>
                         <outlet property="previewView" destination="3Hn-gq-bUb" id="PeP-ss-VzM"/>
+                        <segue destination="4tz-nD-E1K" kind="show" identifier="cameratoupload" id="2Q2-y2-u72"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxa-Xc-OV1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-2122"/>
+            <point key="canvasLocation" x="-84" y="-1814"/>
         </scene>
         <!--Main-->
         <scene sceneID="ZXw-af-pEE">
             <objects>
-                <viewController title="Main" id="mAB-7j-99Q" customClass="MainViewController" customModule="Segue_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="mAB-7j-99Q" customClass="MainViewController" customModule="ReceiptBot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fNN-Hp-ZKf"/>
                         <viewControllerLayoutGuide type="bottom" id="ZgX-Um-a8I"/>
@@ -322,14 +371,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-Nk-WL4" customClass="M">
-                                <rect key="frame" x="0.0" y="28" width="375" height="477"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="512"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="K5n-bS-ZKP"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vna-Qh-2DX">
-                                <rect key="frame" x="75" y="514" width="224" height="39"/>
+                                <rect key="frame" x="75" y="548" width="224" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Add Photo From Library"/>
                                 <connections>
@@ -337,7 +386,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDc-r3-4pF">
-                                <rect key="frame" x="118" y="549" width="139" height="98"/>
+                                <rect key="frame" x="118" y="569" width="139" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Submit Photo"/>
@@ -364,14 +413,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsl-q0-TE4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-171"/>
+            <point key="canvasLocation" x="-84" y="-114.69265367316342"/>
         </scene>
     </scenes>
     <resources>
         <image name="Camera2" width="100" height="100"/>
         <image name="Log" width="26" height="26"/>
         <image name="Receipt" width="100" height="100"/>
-        <image name="Upload" width="100" height="100"/>
+        <image name="Robot" width="80" height="80"/>
+        <image name="TryUpload" width="24" height="24"/>
+        <image name="emptyreceipt" width="279" height="398"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wVX-UL-CmT"/>

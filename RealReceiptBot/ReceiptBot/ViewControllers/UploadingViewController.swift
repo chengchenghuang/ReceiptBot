@@ -13,17 +13,40 @@ class UploadingViewController: UIViewController {
     @IBOutlet weak var memo: UITextView!
     @IBOutlet weak var amount: UITextField!
     @IBOutlet weak var userDate: UITextField!
+    @IBOutlet var photo: UIImageView!
     
+    var receipt = UIImage(named: "emptyreceipt")
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         saveReceipt()
         performSegue(withIdentifier: "uploadingToLog", sender: sender)
     }
     
+    @IBAction func textFieldEditing(sender: UITextField) {
+        
+        let datePickerView: UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.date
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: #selector(UploadingViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        
+    }
+    
+    @objc func datePickerValueChanged(sender: UIDatePicker) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        userDate.text = dateFormatter.string(from: sender.date)
+        
+    }
+    
     func saveReceipt() {
         let appDel = UIApplication.shared.delegate as! AppDelegate
         let context = appDel.persistentContainer.viewContext
-        if let m = self.memo.text {
+        if (self.memo.text) != nil {
             let receipt = Receipt(context: context)
             receipt.amount = self.amount.text
             receipt.date = self.userDate.text
@@ -34,6 +57,7 @@ class UploadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        photo.image = receipt
 
         // Do any additional setup after loading the view.
     }

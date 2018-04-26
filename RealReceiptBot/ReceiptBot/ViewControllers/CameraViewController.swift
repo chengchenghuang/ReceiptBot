@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
     var qrCodeFrameView: UIView?
+    var savedimage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,8 +111,13 @@ class ViewController: UIViewController {
         
         // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
+        
     }
+    
+
+    
 }
+
 
 extension ViewController : AVCapturePhotoCaptureDelegate {
     func photoOutput(_ captureOutput: AVCapturePhotoOutput,
@@ -137,9 +143,14 @@ extension ViewController : AVCapturePhotoCaptureDelegate {
         if let image = capturedImage {
             // Save our captured image to photos album
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            savedimage = image
         }
+        
     }
+    
 }
+
+    
 
 extension ViewController : AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ captureOutput: AVCaptureMetadataOutput,
@@ -179,3 +190,4 @@ extension UIInterfaceOrientation {
         }
     }
 }
+

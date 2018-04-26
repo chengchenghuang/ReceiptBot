@@ -12,6 +12,8 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBOutlet weak var previewImageView: UIImageView!
     
+    var currentimage = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,8 +21,17 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBAction func gotoUpload(_ sender: Any) {
         performSegue(withIdentifier: "gotoUpload", sender: sender)
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoUpload" {
+            if let controller_instance = segue.destination as? UploadingViewController{
+                controller_instance.receipt = currentimage
+            }
+        }
+    }
+        
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,8 +57,6 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     
-    
-    
     /// Sets the Image View's image to the one chosen by the user
     ///
     /// - Parameters:
@@ -56,6 +65,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         previewImageView.image = selectedImage
+        currentimage = selectedImage
         dismiss(animated: true, completion: nil)
     }
     
