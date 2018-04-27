@@ -424,7 +424,7 @@
         <image name="Camera2" width="100" height="100"/>
         <image name="Log" width="26" height="26"/>
         <image name="Receipt" width="100" height="100"/>
-        <image name="Robot" width="80" height="80"/>
+        <image name="Robot" width="597" height="603"/>
         <image name="TryUpload" width="24" height="24"/>
         <image name="emptyreceipt" width="279" height="398"/>
     </resources>
