@@ -124,6 +124,9 @@
 		BD4B95A52075C82C004D4A85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					"Home Page",
+				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "iOS Decal - Jenny | CiCi | Victor";
