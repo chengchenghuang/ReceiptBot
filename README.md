@@ -29,5 +29,9 @@ It has three attributes, memo, data, amount and photo data
 7. PreviewController
 It shows the image that corresponds to a receipt
 
+ReceiptBot Demo on Youtube:
+https://www.youtube.com/watch?v=hSFQTNxYTCQ&t=2s
+
+ReceiptBot Demo gif:
 ![](ReceiptBot.gif)
 
