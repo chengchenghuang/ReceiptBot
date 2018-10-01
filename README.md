@@ -23,6 +23,5 @@ It has three attributes, memo, data, amount and photo data
 7. PreviewController
 It shows the image that corresponds to a receipt
 
-
-
+![](ReceiptBot.gif)
 
