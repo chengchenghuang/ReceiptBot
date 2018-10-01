@@ -1,5 +1,11 @@
 # ReceiptBot
+Summary:
 ReceiptBot is an app that allows users to store, input, and organize their receipts to keep track of their spendings. The user can either upload a receipt from their local album or take a photo through the app camera. Then, the user can input the date, amount, and a short memo for the receipt. All receipts will be stored locally through core data and be accessible offline in the log. 
+
+Authors@:
+CiCi Huang cicihuang@berkeley.edu
+Jenny Cong jfcong@berkeley.edu
+Victor Cheng victorcheng16@berkeley.edu
 
 Files in details:
 1. UploadViewController
