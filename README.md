@@ -33,5 +33,6 @@ ReceiptBot Demo on Youtube:
 https://www.youtube.com/watch?v=hSFQTNxYTCQ&t=2s
 
 ReceiptBot Demo gif:
+
 ![](ReceiptBot.gif)
 
